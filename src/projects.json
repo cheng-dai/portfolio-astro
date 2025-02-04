@@ -14,7 +14,7 @@
       "A Next.js web app that enables Stockholm residents to search food inspection result, integrating Zustand for state management and Google Analytics, reaching more than 500 active users within one week.","Built with React and styled using Tailwind CSS, the app is deployed on Vercel."
     ],
     
-    "url": "https://easysl.vercel.app"
+    "url": "https://stockholm-food-check.vercel.app/"
 
 },
 {"name": "Resale Torg",
@@ -24,7 +24,7 @@
       "Built with Next.js and supabase(PostgreSQL) for data storage, authentication services provided by Clerk."
     ],
     
-    "url": "https://easysl.vercel.app"
+    "url": "https://resale-torg.vercel.app/"
 
 },
 {
