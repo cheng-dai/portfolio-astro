@@ -1,29 +1,47 @@
 ---
-import Intro from "./Intro.astro";
-
-import EasySL from "./EasySL.astro";
-import ResaleTorg from "./ResaleTorg.astro";
-import KeyMotion from "./KeyMotion.astro";
+import Intro from './Intro.astro';
+import EasySL from './EasySL.astro';
+import ResaleTorg from './ResaleTorg.astro';
+import KeyMotion from './KeyMotion.astro';
+import StockholmFoodCheck from './StockholmFoodCheck.astro';
+import NewEasySL from './NewEasySL.astro';
+import ProjectLayout from '@/layouts/ProjectLayout.astro';
+import projectsData from '@/projects.json';
 ---
 
 <section>
-  <div class="p-4">
+  <div class='p-4'>
     <div
-      class="grid grid-cols-1 gap-4 list-none lg:grid-cols-3 lg:grid-rows-1 xl:grid-cols-4 xl:grid-rows-1">
-      <!----
-    // Keep the cards in this order to avoid breaking the layout.
-    //
-    // To adjust the card order, modify the layout within the component itself.
-    ---->
-      <Intro />
-    
-      
+      class='flex flex-col md:flex-row items-center mx-auto gap-4 overflow-x-auto w-full md:items-stretch'
+    >
+      <!-- {
+        Array.from({ length: 4 }, (index, _) => (
+          <Intro key={index} className='md:min-w-[500px] ' />
+        ))
+      } -->
+      <Intro className='md:min-w-[500px]' />
+      {
+        projectsData.map((project) => (
+          <ProjectLayout
+            name={project.name}
+            description={project.description}
+            tech={project.tech}
+            url={project.url}
+            className='md:min-w-[500px]'
+          />
+        ))
+      }
+      <!-- 
+      <StockholmFoodCheck />
+
       <EasySL />
+
       <ResaleTorg />
-      <KeyMotion />
+
+      <KeyMotion /> -->
+
       <!-- <Resume /> -->
-      
-    
+
       <!-- <Newsletter /> -->
       <!-- <Testimonials /> -->
       <!-- <Outro /> -->

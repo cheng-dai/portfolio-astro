@@ -1,0 +1,47 @@
+[
+  {"name": "Easy SL",
+    "tech": ["React", "Tailwind CSS", "Vercel"],
+    "description": [
+      "A progressive web app designed for the SL public transport system in Stockholm, commuters can add to their mobile home screen to check bus and train departure times.","Built with React and styled using Tailwind CSS, the app is deployed on Vercel."
+    ],
+    
+    "url": "https://easysl.vercel.app"
+
+},
+{"name": "Food Check",
+    "tech": [],
+    "description": [
+      "A Next.js web app that enables Stockholm residents to search food inspection result, integrating Zustand for state management and Google Analytics, reaching more than 500 active users within one week.","Built with React and styled using Tailwind CSS, the app is deployed on Vercel."
+    ],
+    
+    "url": "https://easysl.vercel.app"
+
+},
+{"name": "Food Check",
+    "tech": [],
+    "description": [
+      "A Next.js web app that enables Stockholm residents to search food inspection result, integrating Zustand for state management and Google Analytics, reaching more than 500 active users within one week.","Built with React and styled using Tailwind CSS, the app is deployed on Vercel."
+    ],
+    
+    "url": "https://easysl.vercel.app"
+
+},
+{"name": "Food Check",
+    "tech": [],
+    "description": [
+      "A Next.js web app that enables Stockholm residents to search food inspection result, integrating Zustand for state management and Google Analytics, reaching more than 500 active users within one week.","Built with React and styled using Tailwind CSS, the app is deployed on Vercel."
+    ],
+    
+    "url": "https://easysl.vercel.app"
+
+},
+{"name": "Food Check",
+    "tech": [],
+    "description": [
+      "A Next.js web app that enables Stockholm residents to search food inspection result, integrating Zustand for state management and Google Analytics, reaching more than 500 active users within one week.","Built with React and styled using Tailwind CSS, the app is deployed on Vercel."
+    ],
+    
+    "url": "https://easysl.vercel.app"
+
+}
+]
