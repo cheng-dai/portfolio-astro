@@ -6,6 +6,9 @@ import sitemap from "@astrojs/sitemap";
 import vercel from '@astrojs/vercel';
 
 
+import icon from 'astro-icon';
+
+
 export default defineConfig({
   vite: {
    plugins: [tailwindcss()],
@@ -15,7 +18,7 @@ export default defineConfig({
  },
 
   site: 'https://yourdomain.com',
-  integrations: [sitemap()],
+  integrations: [sitemap(), icon()],
   output: 'server',
   adapter: vercel({
     webAnalytics: { enabled: true }
