@@ -1,6 +1,6 @@
 [
   {"name": "Easy SL",
-    "tech": ["React", "Tailwind CSS", "Vercel"],
+    "techStacks": ["React", "Tailwind css", "Vercel"],
     "description": [
       "A progressive web app designed for the SL public transport system in Stockholm, commuters can add to their mobile home screen to check bus and train departure times.","Built with React and styled using Tailwind CSS, the app is deployed on Vercel."
     ],
@@ -9,7 +9,7 @@
 
 },
 {"name": "Food Check",
-    "tech": [],
+    "techStacks": ["Next.js","Tailwind css","Google Analytics"],
     "description": [
       "A Next.js web app that enables Stockholm residents to search food inspection result, integrating Zustand for state management and Google Analytics, reaching more than 500 active users within one week.","Built with React and styled using Tailwind CSS, the app is deployed on Vercel."
     ],
@@ -17,31 +17,23 @@
     "url": "https://easysl.vercel.app"
 
 },
-{"name": "Food Check",
-    "tech": [],
+{"name": "Resale Torg",
+    "techStacks": ["Next.js", "PostgreSQL"],
     "description": [
-      "A Next.js web app that enables Stockholm residents to search food inspection result, integrating Zustand for state management and Google Analytics, reaching more than 500 active users within one week.","Built with React and styled using Tailwind CSS, the app is deployed on Vercel."
+      "A second-hand online market place built mainly for students in Stockholm. It allows users to easily sign up using Google account and verify their identity, resulting a seamless buying and selling experience.",
+      "Built with Next.js and supabase(PostgreSQL) for data storage, authentication services provided by Clerk."
     ],
     
     "url": "https://easysl.vercel.app"
 
 },
-{"name": "Food Check",
-    "tech": [],
-    "description": [
-      "A Next.js web app that enables Stockholm residents to search food inspection result, integrating Zustand for state management and Google Analytics, reaching more than 500 active users within one week.","Built with React and styled using Tailwind CSS, the app is deployed on Vercel."
-    ],
-    
-    "url": "https://easysl.vercel.app"
-
-},
-{"name": "Food Check",
-    "tech": [],
-    "description": [
-      "A Next.js web app that enables Stockholm residents to search food inspection result, integrating Zustand for state management and Google Analytics, reaching more than 500 active users within one week.","Built with React and styled using Tailwind CSS, the app is deployed on Vercel."
-    ],
-    
-    "url": "https://easysl.vercel.app"
-
+{
+  "name": "keyMotion",
+  "techStacks": ["Browser Extension"],
+  "description": [
+    "A Browser extension that allows users to control video playback speed using keyboard shortcuts.",
+    "Built with vanilla JavaScript, published to Chrome Web Store."
+  ],
+  "url": "https://chromewebstore.google.com/detail/keymotion-video-control/plmgjmffjonpnfffldomomneeckplidj"
 }
 ]

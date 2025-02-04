@@ -17,7 +17,7 @@ export default defineConfig({
    }
  },
 
-  site: 'https://yourdomain.com',
+  
   integrations: [sitemap(), icon()],
   output: 'server',
   adapter: vercel({
