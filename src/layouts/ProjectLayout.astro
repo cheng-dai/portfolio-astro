@@ -16,7 +16,9 @@ const { name, description, techStacks, url, className } = Astro.props;
   class={`bg-[#7f6301] overflow-hidden  rounded-3xl p-8 2xl:p-12 ${className}`}
 >
   <!-- tech stack -->
-  <div class="mt-6 flex flex-wrap gap-6 text-zinc-100">
+  <div
+    class="mt-6 flex flex-wrap gap-6 border-b-2 border-dashed border-zinc-100 pb-6 text-zinc-100"
+  >
     {
       techStacks.map((tech) => (
         <div class="flex items-center font-medium text-zinc-100">
