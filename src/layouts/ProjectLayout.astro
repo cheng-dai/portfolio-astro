@@ -12,33 +12,30 @@ interface Props {
 const { name, description, techStacks, url, className } = Astro.props;
 ---
 
-<div
-  class={`bg-[#7f6301] overflow-hidden  rounded-3xl p-8 2xl:p-12 ${className}`}
->
+<div class={`overflow-hidden  rounded-3xl p-8 2xl:p-12 ${className}`}>
   <!-- tech stack -->
   <div
-    class="mt-6 flex flex-wrap gap-6 border-b-2 border-dashed border-zinc-100 pb-6 text-zinc-100"
+    class="mt-6 flex flex-wrap gap-6 border-b-2 border-dotted border-black/20 pb-6"
   >
     {
       techStacks.map((tech) => (
-        <div class="flex items-center font-medium text-zinc-100">
+        <div class="flex items-center font-medium">
           <Icon name={`logos:${techStackIcons[tech]}`} title={tech} />
           <span class="ml-1.5">{tech}</span>
         </div>
       ))
     }
   </div>
+
   <!-- link -->
   <a href={url} target="_blank">
-    <p
-      class="mt-6 flex items-center gap-x-2 text-2xl font-medium text-zinc-100 lg:text-4xl"
-    >
+    <p class="mt-6 flex items-center gap-x-2 text-2xl font-medium lg:text-4xl">
       {name}
       <Arrow class="duration-300 hover:scale-120" />
     </p>
   </a>
   <!-- Introduction -->
-  <div class="mt-6 text-lg text-pretty text-zinc-100 2xl:text-xl">
+  <div class="mt-6 text-lg text-pretty 2xl:text-xl">
     {description.map((paragraph) => <p class="mt-6">{paragraph}</p>)}
   </div>
 </div>

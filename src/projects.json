@@ -1,39 +1,55 @@
 [
-  {"name": "Easy SL",
-    "techStacks": ["React", "Tailwind css", "Vercel"],
+  {
+    "archive": false,
+    "name": "pp studio",
+    "techStacks": ["Next.js", "Tailwind css", "PostgreSQL"],
     "description": [
-      "A progressive web app designed for the SL public transport system in Stockholm, commuters can add to their mobile home screen to check bus and train departure times.","Built with React and styled using Tailwind CSS, the app is deployed on Vercel."
+      "A side project of my own and several friends. It's a culture collective based in Stockholm. I'm responsible for the website and the backend.",
+      "Users can receive newsletters, register for events, and book tickets from the collective. Built with Next.js, integrated with Clerk for authentication, supabase for data storage, and deployed on Vercel."
     ],
-    
-    "url": "https://easysl.vercel.app"
 
-},
-{"name": "Food Check",
-    "techStacks": ["Next.js","Tailwind css","Google Analytics"],
+    "url": "https://ppstudio.run"
+  },
+  {
+    "archive": false,
+    "name": "Stockhlm food check",
+    "techStacks": ["Next.js", "Tailwind css", "Google Analytics"],
     "description": [
-      "A Next.js web app that enables Stockholm residents to search food inspection result, integrating Zustand for state management and Google Analytics, reaching more than 500 active users within one week.","Built with React and styled using Tailwind CSS, the app is deployed on Vercel."
+      "A web app that enables Stockholm residents to search food inspection results, using Zustand for react state management and Google Analytics, reaching more than 500 active users within the first week.",
+      "Built with Next.js, styled using Tailwind CSS, and deployed on Vercel."
     ],
-    
+
     "url": "https://stockholm-food-check.vercel.app/"
-
-},
-{"name": "Resale Torg",
+  },
+  {
+    "archive": true,
+    "name": "Resale Torg",
     "techStacks": ["Next.js", "PostgreSQL"],
     "description": [
       "A second-hand online market place built mainly for students in Stockholm. It allows users to easily sign up using Google account and verify their identity, resulting a seamless buying and selling experience.",
       "Built with Next.js and supabase(PostgreSQL) for data storage, authentication services provided by Clerk."
     ],
-    
-    "url": "https://resale-torg.vercel.app/"
 
-},
-{
-  "name": "keyMotion",
-  "techStacks": ["Browser Extension"],
-  "description": [
-    "A Browser extension that allows users to control video playback speed using keyboard shortcuts.",
-    "Built with vanilla JavaScript, published to Chrome Web Store."
-  ],
-  "url": "https://chromewebstore.google.com/detail/keymotion-video-control/plmgjmffjonpnfffldomomneeckplidj"
-}
+    "url": "https://resale-torg.vercel.app/"
+  },
+  {
+    "archive": false,
+    "name": "SVT Play Subtitles",
+    "techStacks": ["Browser Extension"],
+    "description": [
+      "A Chrome extension that utilizes Chrome's built-in LLM model to translate subtitles in SVT Play",
+      "Built with React, published to Chrome Web Store."
+    ],
+    "url": "https://chromewebstore.google.com/detail/subtitle-translate-svt-pl/nbdjcajgdikaielcldjkobcajaehllee?hl=en-US"
+  },
+  {
+    "archive": true,
+    "name": "keyMotion",
+    "techStacks": ["Browser Extension"],
+    "description": [
+      "A Browser extension that allows users to control video playback speed using keyboard shortcuts.",
+      "Built with vanilla JavaScript, published to Chrome Web Store."
+    ],
+    "url": "https://chromewebstore.google.com/detail/keymotion-video-control/plmgjmffjonpnfffldomomneeckplidj"
+  }
 ]
