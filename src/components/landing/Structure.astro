@@ -2,6 +2,7 @@
 import Intro from "./Intro.astro";
 import ProjectLayout from "@/layouts/ProjectLayout.astro";
 import projectsData from "@/projects.json";
+const projectsToShow = projectsData.filter((project) => !project.archive);
 ---
 
 <section>
@@ -16,7 +17,7 @@ import projectsData from "@/projects.json";
       } -->
       <Intro className="md:min-w-[500px]" />
       {
-        projectsData.map((project) => (
+        projectsToShow.map((project) => (
           <ProjectLayout
             name={project.name}
             description={project.description}
