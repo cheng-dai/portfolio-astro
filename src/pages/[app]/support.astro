@@ -1,0 +1,17 @@
+---
+import apps from "../../apps.json";
+import SupportLayout from "../../layouts/SupportLayout.astro";
+
+const { app } = Astro.params;
+const appData = apps.find((a) => a.slug === app);
+
+if (!appData) {
+  return Astro.redirect("/404");
+}
+---
+
+<SupportLayout
+  appName={appData.name}
+  description={appData.description}
+  contactEmail={appData.contactEmail}
+/>

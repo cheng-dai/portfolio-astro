@@ -1,0 +1,30 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+
+interface Props {
+  appName: string;
+  description: string;
+  contactEmail: string;
+}
+
+const { appName, description, contactEmail } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <BaseHead />
+    <title>{appName} - Support</title>
+  </head>
+  <body class="bg-[#ebe6de] font-sans min-h-screen flex items-center justify-center">
+    <main class="max-w-xl mx-auto px-6 py-16 text-center">
+      <h1 class="text-3xl font-bold mb-4">{appName}</h1>
+      <p class="text-lg text-gray-700 mb-8">{description}</p>
+      <p class="text-gray-600">
+        For support, contact us at
+        <a href={`mailto:${contactEmail}`} class="text-blue-600 underline hover:text-blue-800">
+          {contactEmail}
+        </a>
+      </p>
+    </main>
+  </body>
+</html>
