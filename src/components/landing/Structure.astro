@@ -9,28 +9,45 @@ const allProjects = projectsData.filter((project) => !project.archive);
 <Nav />
 
 <!-- Hero Section -->
-<section class="px-6 md:px-12 pt-6 md:pt-16 pb-10 md:pb-24">
-  <div class="flex flex-col md:flex-row md:items-start gap-8 md:gap-16">
-
-    <h1 class="text-xl md:text-4xl lg:text-5xl font-normal leading-snug md:leading-snug lg:leading-snug max-w-3xl">
-      Software engineer turning ideas into real products — building tools that make life easier, and more fun.
+<section class="px-6 pt-6 pb-10 md:px-12 md:pt-16 md:pb-24">
+  <div class="flex flex-col gap-6 md:items-start">
+    <h1
+      class="max-w-3xl text-xl leading-snug font-normal md:text-4xl md:leading-snug lg:text-5xl lg:leading-snug"
+    >
+      Product engineer.
     </h1>
+    <p
+      class="max-w-3xl text-xl leading-snug font-normal md:text-4xl md:leading-snug lg:text-5xl lg:leading-snug"
+    >
+      Building useful, fun things.
+    </p>
   </div>
 </section>
 
 <!-- Projects Section -->
-<section id="projects" class="px-6 md:px-12 pb-12 md:pb-20">
+<section id="projects" class="px-6 pb-12 md:px-12 md:pb-20">
   <!-- Section header -->
-  <div class="flex items-center justify-end gap-6 mb-8 md:mb-14 text-sm">
-    <button data-tab="featured" class="project-tab font-medium border-b border-current pb-0.5 cursor-pointer">Featured</button>
-    <button data-tab="all" class="project-tab text-black/40 pb-0.5 cursor-pointer">All projects</button>
+  <div class="mb-8 flex items-center justify-end gap-6 text-sm md:mb-14">
+    <button
+      data-tab="featured"
+      class="project-tab cursor-pointer border-b border-current pb-0.5 font-medium"
+      >Featured</button
+    >
+    <button
+      data-tab="all"
+      class="project-tab cursor-pointer pb-0.5 text-black/40"
+      >All projects</button
+    >
   </div>
 
   <!-- Project Grid - each card rendered once with data-featured attribute -->
-  <div id="project-grid" class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
+  <div id="project-grid" class="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-8">
     {
       allProjects.map((project) => (
-        <div class="project-card" data-featured={project.featured ? "true" : "false"}>
+        <div
+          class="project-card"
+          data-featured={project.featured ? "true" : "false"}
+        >
           <ProjectLayout
             name={project.name}
             description={project.description}
@@ -44,45 +61,122 @@ const allProjects = projectsData.filter((project) => !project.archive);
 </section>
 
 <!-- Footer -->
-<footer id="contact" class="px-6 md:px-12 py-6 md:py-8 border-t border-black/10">
-  <div class="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-black/50">
-    <p>Cheng Dai — Software Engineer</p>
+<footer
+  id="contact"
+  class="border-t border-black/10 px-6 py-6 md:px-12 md:py-8"
+>
+  <div
+    class="flex flex-col items-center justify-between gap-4 text-sm text-black/50 md:flex-row"
+  >
     <div class="flex items-center gap-6">
-      <a href="mailto:chengdai.dev@gmail.com" class="hover:text-black transition-colors">Email</a>
-      <a href="https://github.com/cheng-dai" target="_blank" class="hover:text-black transition-colors">GitHub</a>
-      <a href="https://www.linkedin.com/in/chengdai/" target="_blank" class="hover:text-black transition-colors">LinkedIn</a>
+      <a
+        href="mailto:chengdai.dev@gmail.com"
+        class="transition-colors hover:text-black">Email</a
+      >
+      <a
+        href="https://github.com/cheng-dai"
+        target="_blank"
+        class="transition-colors hover:text-black">GitHub</a
+      >
+      <a
+        href="https://www.linkedin.com/in/chengdai/"
+        target="_blank"
+        class="transition-colors hover:text-black">LinkedIn</a
+      >
     </div>
   </div>
 </footer>
 
 <script>
-  const tabs = document.querySelectorAll<HTMLButtonElement>('.project-tab');
-  const cards = document.querySelectorAll<HTMLElement>('.project-card');
+  const tabs = document.querySelectorAll<HTMLButtonElement>(".project-tab");
+  const cards = document.querySelectorAll<HTMLElement>(".project-card");
+  const grid = document.getElementById("project-grid");
 
-  function filterProjects(filter: 'featured' | 'all') {
+  let currentFilter: "featured" | "all" = "featured";
+
+  function setCompactMode(compact: boolean) {
     cards.forEach((card) => {
-      if (filter === 'all' || card.dataset.featured === 'true') {
-        card.style.display = '';
+      const inner = card.querySelector(".project-card-inner");
+      const content = card.querySelector(".description-content");
+      const toggle = card.querySelector(".description-toggle");
+      const showText = card.querySelector(".toggle-show");
+      const hideText = card.querySelector(".toggle-hide");
+
+      if (compact) {
+        // Compact mode: hide description, show toggle button
+        content?.classList.add("hidden");
+        toggle?.classList.remove("hidden");
+        showText?.classList.remove("hidden");
+        hideText?.classList.add("hidden");
       } else {
-        card.style.display = 'none';
+        // Full mode: show description, hide toggle button
+        content?.classList.remove("hidden");
+        toggle?.classList.add("hidden");
       }
     });
+
+    // Adjust grid for compact mode
+    if (compact) {
+      grid?.classList.remove("md:grid-cols-2");
+      grid?.classList.add("md:grid-cols-3");
+    } else {
+      grid?.classList.remove("md:grid-cols-3");
+      grid?.classList.add("md:grid-cols-2");
+    }
   }
 
+  function filterProjects(filter: "featured" | "all") {
+    currentFilter = filter;
+    const isCompact = filter === "all";
+
+    cards.forEach((card) => {
+      if (filter === "all" || card.dataset.featured === "true") {
+        card.style.display = "";
+      } else {
+        card.style.display = "none";
+      }
+    });
+
+    setCompactMode(isCompact);
+  }
+
+  // Setup toggle buttons
+  cards.forEach((card) => {
+    const toggle = card.querySelector(".description-toggle");
+    const content = card.querySelector(".description-content");
+    const showText = card.querySelector(".toggle-show");
+    const hideText = card.querySelector(".toggle-hide");
+
+    toggle?.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const isHidden = content?.classList.contains("hidden");
+
+      if (isHidden) {
+        content?.classList.remove("hidden");
+        showText?.classList.add("hidden");
+        hideText?.classList.remove("hidden");
+      } else {
+        content?.classList.add("hidden");
+        showText?.classList.remove("hidden");
+        hideText?.classList.add("hidden");
+      }
+    });
+  });
+
   // Initial state: show featured only
-  filterProjects('featured');
+  filterProjects("featured");
 
   tabs.forEach((tab) => {
-    tab.addEventListener('click', () => {
-      const target = tab.dataset.tab as 'featured' | 'all';
+    tab.addEventListener("click", () => {
+      const target = tab.dataset.tab as "featured" | "all";
 
       // Update tab styles
       tabs.forEach((t) => {
-        t.classList.remove('font-medium', 'border-b', 'border-current');
-        t.classList.add('text-black/40');
+        t.classList.remove("font-medium", "border-b", "border-current");
+        t.classList.add("text-black/40");
       });
-      tab.classList.add('font-medium', 'border-b', 'border-current');
-      tab.classList.remove('text-black/40');
+      tab.classList.add("font-medium", "border-b", "border-current");
+      tab.classList.remove("text-black/40");
 
       // Filter projects
       filterProjects(target);

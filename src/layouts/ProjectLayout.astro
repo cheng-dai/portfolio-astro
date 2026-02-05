@@ -12,7 +12,7 @@ interface Props {
 const { name, description, techStacks, url, className } = Astro.props;
 ---
 
-<div class={`group rounded-2xl bg-[#e0dad1] p-5 md:p-8 transition-all duration-300 hover:bg-[#d6d0c6] ${className ?? ""}`}>
+<div class={`project-card-inner group h-full rounded-2xl bg-[#e0dad1] p-5 md:p-8 transition-all duration-300 hover:bg-[#d6d0c6] ${className ?? ""}`}>
   <!-- tech stack -->
   <div class="flex flex-wrap gap-3 md:gap-4 text-xs md:text-sm text-black/60">
     {
@@ -25,19 +25,27 @@ const { name, description, techStacks, url, className } = Astro.props;
     }
   </div>
 
-  <!-- link -->
-  <a href={url} target="_blank" class="block mt-4 md:mt-5">
-    <p class="flex items-center gap-x-2 text-lg md:text-2xl font-medium">
-      {name}
-      <Arrow class="duration-300 group-hover:translate-x-1" />
-    </p>
-  </a>
+  <!-- link + toggle -->
+  <div class="flex items-center justify-between mt-4 md:mt-5">
+    <a href={url} target="_blank" class="block">
+      <p class="flex items-center gap-x-2 text-lg md:text-2xl font-medium">
+        {name}
+        <Arrow class="duration-300 group-hover:translate-x-1" />
+      </p>
+    </a>
+    <button class="description-toggle text-black/40 hover:text-black/60 transition-colors hidden text-lg font-medium">
+      <span class="toggle-show">+</span>
+      <span class="toggle-hide hidden">−</span>
+    </button>
+  </div>
 
-  <!-- Introduction -->
-  <div class="mt-3 md:mt-4 text-sm md:text-base text-black/70 text-pretty leading-relaxed">
-    <p>{description[0]}</p>
-    {description.length > 1 && (
-      <p class="hidden md:block mt-3">{description.slice(1).join(' ')}</p>
-    )}
+  <!-- Introduction (collapsible in compact mode) -->
+  <div class="description-wrapper">
+    <div class="description-content mt-3 md:mt-4 text-sm md:text-base text-black/70 text-pretty leading-relaxed">
+      <p>{description[0]}</p>
+      {description.length > 1 && (
+        <p class="hidden md:block mt-3">{description.slice(1).join(' ')}</p>
+      )}
+    </div>
   </div>
 </div>
