@@ -1,37 +1,91 @@
 ---
-import Intro from "./Intro.astro";
+import Nav from "./Nav.astro";
 import ProjectLayout from "@/layouts/ProjectLayout.astro";
 import projectsData from "@/projects.json";
-const projectsToShow = projectsData.filter((project) => !project.archive);
+const allProjects = projectsData.filter((project) => !project.archive);
 ---
 
-<section>
-  <div class="p-4 md:flex md:h-screen md:items-center md:justify-center">
-    <div
-      class="hide-scrollbar mx-auto flex w-full flex-col items-center gap-4 overflow-x-auto md:flex-row md:items-stretch"
-    >
-      <!-- {
-        Array.from({ length: 4 }, (index, _) => (
-          <Intro key={index} className='md:min-w-[500px] ' />
-        ))
-      } -->
-      <Intro className="md:min-w-[500px]" />
-      {
-        projectsToShow.map((project) => (
+<!-- Navigation -->
+<Nav />
+
+<!-- Hero Section -->
+<section class="px-6 md:px-12 pt-6 md:pt-16 pb-10 md:pb-24">
+  <div class="flex flex-col md:flex-row md:items-start gap-8 md:gap-16">
+
+    <h1 class="text-xl md:text-4xl lg:text-5xl font-normal leading-snug md:leading-snug lg:leading-snug max-w-3xl">
+      Software engineer turning ideas into real products — building tools that make life easier, and more fun.
+    </h1>
+  </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="px-6 md:px-12 pb-12 md:pb-20">
+  <!-- Section header -->
+  <div class="flex items-center justify-end gap-6 mb-8 md:mb-14 text-sm">
+    <button data-tab="featured" class="project-tab font-medium border-b border-current pb-0.5 cursor-pointer">Featured</button>
+    <button data-tab="all" class="project-tab text-black/40 pb-0.5 cursor-pointer">All projects</button>
+  </div>
+
+  <!-- Project Grid - each card rendered once with data-featured attribute -->
+  <div id="project-grid" class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
+    {
+      allProjects.map((project) => (
+        <div class="project-card" data-featured={project.featured ? "true" : "false"}>
           <ProjectLayout
             name={project.name}
             description={project.description}
             techStacks={project.techStacks}
             url={project.url}
-            className="md:min-w-[500px]"
           />
-        ))
-      }
-    </div>
+        </div>
+      ))
+    }
   </div>
 </section>
-<style>
-  .hide-scrollbar {
-    scrollbar-width: none;
+
+<!-- Footer -->
+<footer id="contact" class="px-6 md:px-12 py-6 md:py-8 border-t border-black/10">
+  <div class="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-black/50">
+    <p>Cheng Dai — Software Engineer</p>
+    <div class="flex items-center gap-6">
+      <a href="mailto:chengdai.dev@gmail.com" class="hover:text-black transition-colors">Email</a>
+      <a href="https://github.com/cheng-dai" target="_blank" class="hover:text-black transition-colors">GitHub</a>
+      <a href="https://www.linkedin.com/in/chengdai/" target="_blank" class="hover:text-black transition-colors">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const tabs = document.querySelectorAll<HTMLButtonElement>('.project-tab');
+  const cards = document.querySelectorAll<HTMLElement>('.project-card');
+
+  function filterProjects(filter: 'featured' | 'all') {
+    cards.forEach((card) => {
+      if (filter === 'all' || card.dataset.featured === 'true') {
+        card.style.display = '';
+      } else {
+        card.style.display = 'none';
+      }
+    });
   }
-</style>
+
+  // Initial state: show featured only
+  filterProjects('featured');
+
+  tabs.forEach((tab) => {
+    tab.addEventListener('click', () => {
+      const target = tab.dataset.tab as 'featured' | 'all';
+
+      // Update tab styles
+      tabs.forEach((t) => {
+        t.classList.remove('font-medium', 'border-b', 'border-current');
+        t.classList.add('text-black/40');
+      });
+      tab.classList.add('font-medium', 'border-b', 'border-current');
+      tab.classList.remove('text-black/40');
+
+      // Filter projects
+      filterProjects(target);
+    });
+  });
+</script>

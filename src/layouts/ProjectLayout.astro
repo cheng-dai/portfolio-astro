@@ -12,11 +12,9 @@ interface Props {
 const { name, description, techStacks, url, className } = Astro.props;
 ---
 
-<div class={`overflow-hidden  rounded-3xl p-8 2xl:p-12 ${className}`}>
+<div class={`group rounded-2xl bg-[#e0dad1] p-5 md:p-8 transition-all duration-300 hover:bg-[#d6d0c6] ${className ?? ""}`}>
   <!-- tech stack -->
-  <div
-    class="mt-6 flex flex-wrap gap-6 border-b-2 border-dotted border-black/20 pb-6"
-  >
+  <div class="flex flex-wrap gap-3 md:gap-4 text-xs md:text-sm text-black/60">
     {
       techStacks.map((tech) => (
         <div class="flex items-center font-medium">
@@ -28,14 +26,18 @@ const { name, description, techStacks, url, className } = Astro.props;
   </div>
 
   <!-- link -->
-  <a href={url} target="_blank">
-    <p class="mt-6 flex items-center gap-x-2 text-2xl font-medium lg:text-4xl">
+  <a href={url} target="_blank" class="block mt-4 md:mt-5">
+    <p class="flex items-center gap-x-2 text-lg md:text-2xl font-medium">
       {name}
-      <Arrow class="duration-300 hover:scale-120" />
+      <Arrow class="duration-300 group-hover:translate-x-1" />
     </p>
   </a>
+
   <!-- Introduction -->
-  <div class="mt-6 text-lg text-pretty 2xl:text-xl">
-    {description.map((paragraph) => <p class="mt-6">{paragraph}</p>)}
+  <div class="mt-3 md:mt-4 text-sm md:text-base text-black/70 text-pretty leading-relaxed">
+    <p>{description[0]}</p>
+    {description.length > 1 && (
+      <p class="hidden md:block mt-3">{description.slice(1).join(' ')}</p>
+    )}
   </div>
 </div>

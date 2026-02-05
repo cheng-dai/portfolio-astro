@@ -1,6 +1,7 @@
 [
   {
     "archive": false,
+    "featured": true,
     "name": "pp studio",
     "techStacks": ["Next.js", "Tailwind css", "PostgreSQL"],
     "description": [
@@ -12,6 +13,7 @@
   },
   {
     "archive": false,
+    "featured": false,
     "name": "Stockhlm food check",
     "techStacks": ["Next.js", "Tailwind css", "Google Analytics"],
     "description": [
@@ -23,6 +25,7 @@
   },
   {
     "archive": true,
+    "featured": false,
     "name": "Resale Torg",
     "techStacks": ["Next.js", "PostgreSQL"],
     "description": [
@@ -34,6 +37,7 @@
   },
   {
     "archive": false,
+    "featured": true,
     "name": "SVT Play Subtitles",
     "techStacks": ["Browser Extension"],
     "description": [
@@ -44,6 +48,7 @@
   },
   {
     "archive": true,
+    "featured": false,
     "name": "keyMotion",
     "techStacks": ["Browser Extension"],
     "description": [
