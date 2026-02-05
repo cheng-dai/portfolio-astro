@@ -1,57 +1,96 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import Nav from "@/components/landing/Nav.astro";
+import booksData from "@/books.json";
+
+const currentlyReading = booksData.filter((book) => book.status === "reading");
 ---
 
 <BaseLayout>
   <Nav />
 
   <!-- Bio Section -->
-  <section class="px-8 md:px-12 pt-8 md:pt-16 pb-16 md:pb-24">
-    <h1 class="text-2xl md:text-4xl font-normal leading-snug mb-6">About</h1>
+  <section class="px-8 pt-8 pb-16 md:px-12 md:pt-16 md:pb-24">
+    <h1 class="mb-6 text-2xl leading-snug font-normal md:text-4xl">About</h1>
     <div class="max-w-2xl space-y-4 text-black/70">
       <p>
-        I'm Cheng Dai — a software engineer turning ideas into real products.
-        I build tools that make life easier, and more fun.
+        I'm Cheng Dai — a software engineer enjoying turning shower thoughts
+        into useful products.
       </p>
       <p>
-        When I'm not coding, you can find me running trails, reading, or exploring new places.
+        When I'm not coding, you can find me running trails, reading, or talking
+        to my cat.
       </p>
     </div>
   </section>
 
   <!-- Running Section -->
-  <section class="px-8 md:px-12 pb-16 md:pb-24">
-    <h2 class="text-xl md:text-2xl font-normal mb-6">Running</h2>
-    <div class="rounded-lg border border-black/10 p-6 md:p-8 max-w-2xl">
-      <p class="text-black/50 text-sm">Garmin stats coming soon.</p>
+  <!-- <section class="px-8 pb-16 md:px-12 md:pb-24">
+    <h2 class="mb-6 text-xl font-normal md:text-2xl">Running</h2>
+    <div class="max-w-2xl rounded-lg border border-black/10 p-6 md:p-8">
+
     </div>
-  </section>
+  </section> -->
 
   <!-- Books Section -->
-  <section class="px-8 md:px-12 pb-16 md:pb-24">
-    <h2 class="text-xl md:text-2xl font-normal mb-6">Books</h2>
-    <div class="rounded-lg border border-black/10 p-6 md:p-8 max-w-2xl">
-      <p class="text-black/50 text-sm">Reading list coming soon.</p>
-    </div>
+  <section class="px-8 pb-16 md:px-12 md:pb-24">
+    <h2 class="mb-6 text-xl font-normal md:text-2xl">Books</h2>
+
+    <!-- Currently Reading -->
+    {currentlyReading.length > 0 && (
+      <div class="mb-8">
+        <h3 class="text-sm text-black/50 mb-4">Currently reading</h3>
+        <div class="flex flex-wrap gap-4">
+          {currentlyReading.map((book) => (
+            <div class="group flex gap-4 items-start">
+              {book.cover && (
+                <img
+                  src={book.cover}
+                  alt={book.title}
+                  class="w-16 h-24 object-cover rounded shadow-sm group-hover:shadow-md transition-shadow"
+                />
+              )}
+              <div class="py-1">
+                <p class="font-medium text-sm">{book.title}</p>
+                <p class="text-xs text-black/50">{book.author}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    )}
+
   </section>
 
   <!-- Photos Section -->
-  <section class="px-8 md:px-12 pb-16 md:pb-24">
-    <h2 class="text-xl md:text-2xl font-normal mb-6">Photos</h2>
-    <div class="rounded-lg border border-black/10 p-6 md:p-8 max-w-2xl">
-      <p class="text-black/50 text-sm">Photo gallery coming soon.</p>
+  <section class="px-8 pb-16 md:px-12 md:pb-24">
+    <h2 class="mb-6 text-xl font-normal md:text-2xl">Photos</h2>
+    <div class="max-w-2xl rounded-lg border border-black/10 p-6 md:p-8">
+      <p class="text-sm text-black/50">Photo gallery coming soon.</p>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="px-8 md:px-12 py-8 border-t border-black/10">
-    <div class="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-black/50">
+  <footer class="border-t border-black/10 px-8 py-8 md:px-12">
+    <div
+      class="flex flex-col items-center justify-between gap-4 text-sm text-black/50 md:flex-row"
+    >
       <p>Cheng Dai — Software Engineer</p>
       <div class="flex items-center gap-6">
-        <a href="mailto:chengdai.dev@gmail.com" class="hover:text-black transition-colors">Email</a>
-        <a href="https://github.com/cheng-dai" target="_blank" class="hover:text-black transition-colors">GitHub</a>
-        <a href="https://www.linkedin.com/in/chengdai/" target="_blank" class="hover:text-black transition-colors">LinkedIn</a>
+        <a
+          href="mailto:chengdai.dev@gmail.com"
+          class="transition-colors hover:text-black">Email</a
+        >
+        <a
+          href="https://github.com/cheng-dai"
+          target="_blank"
+          class="transition-colors hover:text-black">GitHub</a
+        >
+        <a
+          href="https://www.linkedin.com/in/chengdai/"
+          target="_blank"
+          class="transition-colors hover:text-black">LinkedIn</a
+        >
       </div>
     </div>
   </footer>
