@@ -14,7 +14,7 @@
   {
     "archive": false,
     "featured": false,
-    "name": "Stockhlm food check",
+    "name": "Stockholm food check",
     "techStacks": ["Next.js", "Tailwind css", "Google Analytics"],
     "description": [
       "A web app that enables Stockholm residents to search food inspection results, using Zustand for react state management and Google Analytics, reaching more than 500 active users within the first week.",
@@ -38,10 +38,10 @@
   {
     "archive": false,
     "featured": true,
-    "name": "SVT Play Subtitles",
+    "name": "SVT Play subtitle extension",
     "techStacks": ["Browser Extension"],
     "description": [
-      "A Chrome extension that utilizes Chrome's built-in LLM model to translate subtitles in SVT Play",
+      "A Chrome extension that utilizes Chrome's built-in LLM api to translate subtitles in SVT Play",
       "Built with React, published to Chrome Web Store."
     ],
     "url": "https://chromewebstore.google.com/detail/subtitle-translate-svt-pl/nbdjcajgdikaielcldjkobcajaehllee?hl=en-US"
