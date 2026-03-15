@@ -6,4 +6,8 @@
   --border-radius-6xl: 5rem;
   --box-shadow-dark: 0px 7px 32px rgb(0 0 0 / 35%);
   --font-sans: Inter, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  --color-paper: #c8c4bc;
+  --color-ink: #8b3a2a;
+  --color-bg: #1a1a1a;
 }

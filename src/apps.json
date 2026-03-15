@@ -1,8 +1,62 @@
 [
   {
-    "slug": "newsLingo",
-    "name": "NewsLingo",
-    "description": "",
-    "contactEmail": "cheng@chengdai.co"
+    "slug": "lingonews",
+    "name": "Lingo News",
+    "tagline": "Learn languages through real news articles",
+    "description": "Lingo News helps you learn new languages naturally by reading real news from local media. Tap any word for instant translations, build your vocabulary with spaced repetition, and listen to native pronunciation.",
+    "contactEmail": "chengdai.dev@gmail.com",
+    "features": [
+      {
+        "title": "Real News Articles",
+        "description": "Read current articles from local news outlets with side-by-side translations."
+      },
+      {
+        "title": "Tap to Translate",
+        "description": "Tap any word to see its translation and example sentences."
+      },
+      {
+        "title": "Vocabulary Builder",
+        "description": "Save words and master them with a spaced repetition learning system."
+      },
+      {
+        "title": "Audio Pronunciation",
+        "description": "Listen to native pronunciation for any word or sentence."
+      },
+      {
+        "title": "On-Device Translation",
+        "description": "Powered by Apple's on-device models for fast, private translations."
+      },
+      {
+        "title": "Detailed Word Analysis",
+        "description": "Premium feature: get grammar breakdowns, word forms, etymology, and common phrases."
+      }
+    ],
+    "faq": [
+      {
+        "question": "What language does NewsLingo support?",
+        "answer": "Lingo News currently supports learning Swedish from English, with more languages coming soon. Swedish articles are sourced from major outlets including SVT, TV4 Nyheterna, and Expressen."
+      },
+      {
+        "question": "Do I need an internet connection?",
+        "answer": "An internet connection is required to fetch news articles. However, translations use Apple's on-device models when available, so they work without sending your data to external servers."
+      },
+      {
+        "question": "What devices are supported?",
+        "answer": "NewsLingo requires an iPhone running iOS 26.2 or later."
+      },
+      {
+        "question": "What does the premium subscription include?",
+        "answer": "Premium subscribers get Gemini-powered translation fallback for improved accuracy and detailed word analysis including grammar breakdowns, word forms, related words, and etymology."
+      },
+      {
+        "question": "How does the vocabulary system work?",
+        "answer": "When you tap a word, you can save it to your vocabulary. The app uses a spaced repetition algorithm that tracks your progress through stages: new word, learning, reviewing, and mastered."
+      },
+      {
+        "question": "How do I restore my subscription?",
+        "answer": "Open the app, go to Settings, and tap Restore Purchases. Your subscription is managed through your Apple ID and will restore automatically."
+      }
+    ],
+    "privacy": "NewsLingo respects your privacy. Translations are processed on-device using Apple Foundation Models whenever possible. Your saved vocabulary is stored locally on your device. We do not collect personal data or share information with third parties. Premium features that use the Gemini API send only the text being translated — no personal information is included."
   }
 ]

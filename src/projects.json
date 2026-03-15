@@ -4,11 +4,11 @@
     "featured": true,
     "name": "pp studio",
     "techStacks": ["Next.js", "Tailwind css", "PostgreSQL"],
+    "shortDescription": "Website for a culture collective I run with friends in Stockholm.",
     "description": [
       "A side project of my own and several friends. It's a culture collective based in Stockholm. I'm responsible for the website and the backend.",
       "Users can receive newsletters, register for events, and book tickets from the collective. Built with Next.js, integrated with Clerk for authentication, supabase for data storage, and deployed on Vercel."
     ],
-
     "url": "https://ppstudio.run"
   },
   {
@@ -16,11 +16,11 @@
     "featured": false,
     "name": "Stockholm food check",
     "techStacks": ["Next.js", "Tailwind css", "Google Analytics"],
+    "shortDescription": "Look up food inspection results for restaurants in Stockholm. 500+ users in the first week.",
     "description": [
       "A web app that enables Stockholm residents to search food inspection results, using Zustand for react state management and Google Analytics, reaching more than 500 active users within the first week.",
       "Built with Next.js, styled using Tailwind CSS, and deployed on Vercel."
     ],
-
     "url": "https://stockholm-food-check.vercel.app/"
   },
   {
@@ -28,11 +28,11 @@
     "featured": false,
     "name": "Resale Torg",
     "techStacks": ["Next.js", "PostgreSQL"],
+    "shortDescription": "Second-hand marketplace for Stockholm students.",
     "description": [
       "A second-hand online market place built mainly for students in Stockholm. It allows users to easily sign up using Google account and verify their identity, resulting a seamless buying and selling experience.",
       "Built with Next.js and supabase(PostgreSQL) for data storage, authentication services provided by Clerk."
     ],
-
     "url": "https://resale-torg.vercel.app/"
   },
   {
@@ -40,6 +40,7 @@
     "featured": true,
     "name": "SVT Play subtitle extension",
     "techStacks": ["Browser Extension"],
+    "shortDescription": "Chrome extension that translates subtitles on SVT Play using Chrome's built-in AI.",
     "description": [
       "A Chrome extension that utilizes Chrome's built-in LLM api to translate subtitles in SVT Play",
       "Built with React, published to Chrome Web Store."
@@ -51,6 +52,7 @@
     "featured": false,
     "name": "keyMotion",
     "techStacks": ["Browser Extension"],
+    "shortDescription": "Browser extension for controlling video playback with keyboard shortcuts.",
     "description": [
       "A Browser extension that allows users to control video playback speed using keyboard shortcuts.",
       "Built with vanilla JavaScript, published to Chrome Web Store."
