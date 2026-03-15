@@ -188,15 +188,17 @@ const currentlyReading = booksData.filter((book) => book.status === "reading");
     opacity: 1;
   }
 
-  /* Mobile order: bio/projects first */
-  .sidebar-left { order: 2; }
-  .main-center { order: 1; }
+  /* Mobile order: bio first, then projects, then now */
+  .sidebar-left { order: 1; }
+  .main-center { order: 2; }
   .sidebar-right { order: 3; }
+  footer { order: 4; }
 
   @media (min-width: 768px) {
     .sidebar-left { order: unset; }
     .main-center { order: unset; }
     .sidebar-right { order: unset; }
+    footer { order: unset; }
   }
 
   /* Left sidebar */
