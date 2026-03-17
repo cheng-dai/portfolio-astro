@@ -1,62 +1,62 @@
 [
   {
-    "slug": "lingonews",
-    "name": "Lingo News",
-    "tagline": "Learn languages through real news articles",
-    "description": "Lingo News helps you learn new languages naturally by reading real news from local media. Tap any word for instant translations, build your vocabulary with spaced repetition, and listen to native pronunciation.",
+    "slug": "lingon",
+    "name": "Lingon",
+    "tagline": "Learn Swedish with real news",
+    "description": "Lingon helps you learn Swedish by reading real news from SVT, TV4, and Expressen. Three reading modes let you adjust as you go — full translations, side-by-side, or Swedish only.",
     "contactEmail": "chengdai.dev@gmail.com",
     "features": [
       {
-        "title": "Real News Articles",
-        "description": "Read current articles from local news outlets with side-by-side translations."
+        "title": "Three Reading Modes",
+        "description": "Read in Swedish only, with translations, or side-by-side. Swipe to switch anytime."
       },
       {
-        "title": "Tap to Translate",
-        "description": "Tap any word to see its translation and example sentences."
+        "title": "Built-in Dictionary",
+        "description": "Long-press any word to look it up. No app-switching needed."
       },
       {
-        "title": "Vocabulary Builder",
-        "description": "Save words and master them with a spaced repetition learning system."
+        "title": "AI Simplification",
+        "description": "Tap Simplify to rewrite any article in shorter sentences with everyday vocabulary."
       },
       {
-        "title": "Audio Pronunciation",
-        "description": "Listen to native pronunciation for any word or sentence."
+        "title": "Chat Tutor",
+        "description": "Ask questions about grammar, vocabulary, or anything in the article you're reading."
+      },
+      {
+        "title": "Read Aloud",
+        "description": "Hear articles spoken in Swedish. Pro users get five voice options and speed control."
       },
       {
         "title": "On-Device Translation",
-        "description": "Powered by Apple's on-device models for fast, private translations."
-      },
-      {
-        "title": "Detailed Word Analysis",
-        "description": "Premium feature: get grammar breakdowns, word forms, etymology, and common phrases."
+        "description": "Translations run on-device by default. Pro subscribers get cloud translations as a fallback."
       }
     ],
     "faq": [
       {
-        "question": "What language does NewsLingo support?",
-        "answer": "Lingo News currently supports learning Swedish from English, with more languages coming soon. Swedish articles are sourced from major outlets including SVT, TV4 Nyheterna, and Expressen."
+        "question": "What language does Lingon teach?",
+        "answer": "Lingon is designed for learning Swedish. Articles come from SVT, TV4, and Expressen. Translations are available in English, Chinese, Arabic, French, and German."
       },
       {
         "question": "Do I need an internet connection?",
-        "answer": "An internet connection is required to fetch news articles. However, translations use Apple's on-device models when available, so they work without sending your data to external servers."
+        "answer": "You need internet to fetch news articles. Translations use Apple's on-device models when available, so they work without sending data to external servers."
       },
       {
         "question": "What devices are supported?",
-        "answer": "NewsLingo requires an iPhone running iOS 26.2 or later."
+        "answer": "Lingon requires an iPhone running iOS 26.2 or later."
       },
       {
-        "question": "What does the premium subscription include?",
-        "answer": "Premium subscribers get Gemini-powered translation fallback for improved accuracy and detailed word analysis including grammar breakdowns, word forms, related words, and etymology."
+        "question": "What does the Pro subscription include?",
+        "answer": "Pro subscribers get unlimited articles, cloud translations via Gemini API as a fallback, unlimited AI chat messages, five Swedish TTS voices with speed control, and unlimited saved articles."
       },
       {
-        "question": "How does the vocabulary system work?",
-        "answer": "When you tap a word, you can save it to your vocabulary. The app uses a spaced repetition algorithm that tracks your progress through stages: new word, learning, reviewing, and mastered."
+        "question": "How do I look up a word?",
+        "answer": "Long-press any word in an article to bring up the built-in iOS dictionary."
       },
       {
         "question": "How do I restore my subscription?",
-        "answer": "Open the app, go to Settings, and tap Restore Purchases. Your subscription is managed through your Apple ID and will restore automatically."
+        "answer": "Open the app, go to Settings, tap Premium, then tap Restore Purchases at the bottom of the screen."
       }
     ],
-    "privacy": "NewsLingo respects your privacy. Translations are processed on-device using Apple Foundation Models whenever possible. Your saved vocabulary is stored locally on your device. We do not collect personal data or share information with third parties. Premium features that use the Gemini API send only the text being translated — no personal information is included."
+    "privacy": "Lingon respects your privacy. Translations are processed on-device using Apple Foundation Models whenever possible. Your saved articles, reading preferences, and settings are stored locally on your device. No account or sign-in is required. The app fetches news articles from public RSS feeds (SVT, TV4, Expressen). Firebase is used to deliver pre-translated article data. Pro subscribers may have article text sent to Google's Gemini API for translation and AI chat — only the article text is sent, no personal information. Subscription purchases are handled by Apple through StoreKit. Lingon does not include advertising, does not use tracking frameworks, and does not collect personal data. Deleting the app removes all stored data. For privacy questions, contact chengdai.dev@gmail.com."
   }
 ]
