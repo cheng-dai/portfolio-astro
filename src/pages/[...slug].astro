@@ -1,0 +1,5 @@
+---
+// Catch-all route to ensure subdomain rewrites reach the server.
+// Without this, Vercel's edge routing rejects paths that don't match a known route.
+return new Response(null, { status: 404 });
+---
