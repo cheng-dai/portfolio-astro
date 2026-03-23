@@ -1,0 +1,36 @@
+---
+import apps from "../../apps.json";
+import BaseHead from "../../components/BaseHead.astro";
+
+const { app } = Astro.params;
+const appData = apps.find((a) => a.slug === app);
+
+if (!appData) {
+  return Astro.redirect("/404");
+}
+---
+
+<html lang="en">
+  <head>
+    <BaseHead />
+    <title>{appData.name} - Privacy Policy</title>
+  </head>
+  <body class="bg-[#ebe6de] font-sans min-h-screen text-black/80">
+    <main class="max-w-3xl mx-auto px-8 md:px-12 py-16">
+
+      <section class="mb-16">
+        <h1 class="text-4xl font-bold tracking-tight mb-3">Privacy Policy</h1>
+        <p class="text-xl text-black/50">{appData.name}</p>
+      </section>
+
+      <section class="mb-16">
+        <p class="text-black/70 leading-relaxed">{appData.privacy}</p>
+      </section>
+
+      <div class="pt-8 border-t border-black/10">
+        <a href={`/${appData.slug}`} class="text-sm text-black/40 hover:text-black/60 transition-colors">&larr; {appData.name}</a>
+      </div>
+
+    </main>
+  </body>
+</html>

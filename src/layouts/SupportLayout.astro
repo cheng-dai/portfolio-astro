@@ -13,21 +13,21 @@ interface FAQItem {
 
 interface Props {
   appName: string;
+  appSlug: string;
   tagline?: string;
   description: string;
   contactEmail: string;
   features?: Feature[];
   faq?: FAQItem[];
-  privacy?: string;
 }
 
-const { appName, tagline, description, contactEmail, features, faq, privacy } = Astro.props;
+const { appName, appSlug, tagline, description, contactEmail, features, faq } = Astro.props;
 ---
 
 <html lang="en">
   <head>
     <BaseHead />
-    <title>{appName} - Support</title>
+    <title>{appName}</title>
   </head>
   <body class="bg-[#ebe6de] font-sans min-h-screen text-black/80">
     <main class="max-w-3xl mx-auto px-8 md:px-12 py-16">
@@ -73,12 +73,12 @@ const { appName, tagline, description, contactEmail, features, faq, privacy } = 
       )}
 
       <!-- Privacy -->
-      {privacy && (
-        <section class="mb-16">
-          <h2 class="text-2xl font-semibold mb-4">Privacy</h2>
-          <p class="text-black/70 leading-relaxed">{privacy}</p>
-        </section>
-      )}
+      <section class="mb-16">
+        <h2 class="text-2xl font-semibold mb-4">Privacy</h2>
+        <a href={`/${appSlug}/privacy`} class="text-black/70 underline underline-offset-2 hover:text-black/90 transition-colors">
+          Privacy Policy
+        </a>
+      </section>
 
       <!-- Contact -->
       <section class="mb-8">
