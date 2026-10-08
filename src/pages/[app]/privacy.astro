@@ -23,8 +23,19 @@ if (!appData) {
         <p class="text-xl text-black/50">{appData.name}</p>
       </section>
 
-      <section class="mb-16">
-        <p class="text-black/70 leading-relaxed">{appData.privacy}</p>
+      <section class="mb-16 space-y-6">
+        {appData.privacy.split('\n\n').map((block: string) => {
+          const lines = block.split('\n');
+          if (lines.length > 1) {
+            return (
+              <div>
+                <h2 class="text-lg font-semibold mb-2">{lines[0]}</h2>
+                <p class="text-black/70 leading-relaxed">{lines.slice(1).join(' ')}</p>
+              </div>
+            );
+          }
+          return <p class="text-black/70 leading-relaxed">{block}</p>;
+        })}
       </section>
 
       <div class="pt-8 border-t border-black/10">

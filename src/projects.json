@@ -12,7 +12,7 @@
     "url": "https://ppstudio.run"
   },
   {
-    "archive": false,
+    "archive": true,
     "featured": false,
     "name": "Stockholm food check",
     "techStacks": ["Next.js", "Tailwind css", "Google Analytics"],
