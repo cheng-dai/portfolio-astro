@@ -12,8 +12,10 @@ if (!appData) {
 
 <html lang="en">
   <head>
-    <BaseHead />
-    <title>{appData.name} - Privacy Policy</title>
+    <BaseHead
+      title={`${appData.name} — Privacy Policy`}
+      description={`How ${appData.name} handles your data, permissions and privacy.`}
+    />
   </head>
   <body class="bg-[#ebe6de] font-sans min-h-screen text-black/80">
     <main class="max-w-3xl mx-auto px-8 md:px-12 py-16">
