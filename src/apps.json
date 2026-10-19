@@ -58,5 +58,61 @@
       }
     ],
     "privacy": "Last updated: March 23, 2026\n\nLingon respects your privacy. This policy explains what data the app accesses and how it is handled.\n\nData Stored on Your Device\nYour saved articles, reading preferences, and settings are stored locally on your device. No account or sign-in is required.\n\nOn-Device Translation\nTranslations are processed on-device using Apple Foundation Models whenever possible. No text is sent to external servers for standard translations.\n\nNews Content\nThe app fetches news articles from public RSS feeds (SVT, TV4, Expressen, 8 Sidor). Firebase is used to deliver pre-translated article data.\n\nPro Features & Third-Party Services\nPro subscribers may have article text sent to Google's Gemini API for cloud translation, AI simplification, and AI chat. Only the article text and your chat messages are sent — no personal information is included.\n\nSubscriptions\nSubscription purchases are handled entirely by Apple through StoreKit. Lingon does not process or store any payment information.\n\nNo Tracking or Advertising\nLingon does not include advertising, does not use tracking frameworks, and does not collect personal data.\n\nData Deletion\nDeleting the app removes all locally stored data.\n\nContact\nFor privacy questions, contact chengdai.dev@gmail.com."
+  },
+  {
+    "slug": "search-switch",
+    "name": "Search Switch",
+    "tagline": "More search engines for Safari.",
+    "description": "Use Brave, Startpage, Qwant or Mojeek from Safari’s address bar. Open Search Switch in Safari and pick an engine from the dropdown. Works on iPhone, iPad and Mac.",
+    "contactEmail": "chengdai.dev@gmail.com",
+    "features": [
+      {
+        "title": "Four search engines",
+        "description": "Choose Brave, Startpage, Qwant or Mojeek. Your choice saves automatically."
+      },
+      {
+        "title": "Easy to turn off",
+        "description": "Choose Off to use Safari’s usual search engine again."
+      },
+      {
+        "title": "No account needed",
+        "description": "Your choice stays on your device. The extension has no analytics or advertising."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I set it up on iPhone or iPad?",
+        "answer": "Install Search Switch, then open Settings → Apps → Safari → Extensions → Search Switch and turn on Allow Extension. On older iOS versions, Safari is directly in Settings. In Safari, open the page menu or Extensions menu, choose Search Switch, and select an engine. Allow access to the search websites when Safari asks."
+      },
+      {
+        "question": "How do I set it up on Mac?",
+        "answer": "Open Search Switch after installing it. In Safari → Settings → Extensions, enable Search Switch. Open it from Safari’s toolbar and choose an engine. Allow access to the search websites when Safari asks."
+      },
+      {
+        "question": "Why does it need website access?",
+        "answer": "Safari needs permission for both the original search website and your chosen engine to apply a redirect. You can manage these permissions in Safari’s extension settings. Search Switch does not read result pages or keep a search history."
+      },
+      {
+        "question": "Which searches can it redirect?",
+        "answer": "It redirects standard web searches on google.com, bing.com, duckduckgo.com, search.yahoo.com and ecosia.org, including searches started from Safari’s address bar. Searches made directly on these sites also redirect. Other regional domains and search formats may not work. Image, news and other search filters are not carried over."
+      },
+      {
+        "question": "Why are searches still going to Safari’s usual engine?",
+        "answer": "Check that Search Switch is enabled, the dropdown is set to an engine rather than Off, and Safari has allowed access to both search websites. If you use Safari profiles, enable the extension for that profile too. Then try a new address-bar search. If your usual engine uses an unsupported regional domain, try DuckDuckGo in Safari’s Search settings."
+      },
+      {
+        "question": "Does it change search suggestions?",
+        "answer": "No. Safari’s Search Engine Suggestions still come from the engine selected in Safari’s own Search settings. You can turn those suggestions off there. Search Switch redirects the search after you submit it."
+      },
+      {
+        "question": "How do I turn it off?",
+        "answer": "Open Search Switch in Safari and choose Off. Safari will use its usual search engine again. You can also disable the extension in Safari’s settings."
+      },
+      {
+        "question": "Does it work in Private Browsing?",
+        "answer": "Safari controls extension access in Private Browsing separately. Allow Search Switch in Private Browsing in Safari’s extension settings if you want to use it there."
+      }
+    ],
+    "privacy": "Last updated: October 19, 2026\n\nSearch Switch is a Safari extension made by Cheng Dai. This policy covers the app and extension on iPhone, iPad and Mac.\n\nData Stored on Your Device\nSearch Switch saves your selected search engine and whether redirection is on or off in the extension’s local storage. It does not send these settings to me or use its own sync service.\n\nSearches and Search Providers\nSafari applies redirect rules to supported search URLs and sends the query to your chosen provider: Brave, Startpage, Qwant or Mojeek. Safari’s usual search engine may also receive the query before redirection and when providing search suggestions. These providers handle queries, IP addresses and other connection data under their own privacy policies. Search Switch does not read the text on result pages or save a search history.\n\nWebsite Permissions\nSafari requires permission for both the original search website and the chosen provider for redirects to work. The extension declares access only to supported search websites. You control this access in Safari’s extension settings and can revoke it at any time.\n\nNo Accounts, Advertising or App Analytics\nThe app and extension have no accounts, advertising, analytics SDKs or developer-operated backend. They do not send searches, browsing history or usage analytics to me.\n\nRetention and Deletion\nLocal settings are kept for as long as the extension’s local data remains on your device. Choosing Off stops redirection but keeps your saved engine choice. You can disable Search Switch or revoke its website access in Safari at any time. To remove its local settings, uninstall the extension and its containing app. Safari’s browsing history and records held by search providers are managed separately. I hold no server-side app settings or search records to delete.\n\nSupport Email\nIf you email me, I receive your email address and the information you include. I use this to reply and troubleshoot the issue, and keep the correspondence for as long as needed to handle your request. You can ask me to delete it by emailing chengdai.dev@gmail.com. Please avoid including private search queries or other sensitive information.\n\nThis Website\nThis support website is hosted on Vercel and uses Vercel Web Analytics for aggregate traffic statistics, including page views, referrers, browser, device and approximate location. It also loads fonts from Google Fonts. These website services receive connection data when you visit these pages; they are separate from the extension and do not receive search queries from Search Switch.\n\nChanges to This Policy\nIf the app’s data handling changes, I will update this page and its date.\n\nContact\nFor questions about Search Switch or this policy, contact Cheng Dai at chengdai.dev@gmail.com."
   }
 ]
